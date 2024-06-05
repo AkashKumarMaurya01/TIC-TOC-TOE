@@ -1,0 +1,147 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+nav {
+  background-color: rgb(15, 11, 67);
+  color: white;
+  height: 6vw;
+  font-size: 2vw;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  font-family: cursive;
+  background-image: linear-gradient(200deg, rgb(26 56 186), rgb(174, 161, 239), rgb(13 13 221 / 45%));
+  gap: 1vw;
+
+}
+nav li {
+  list-style: none;
+}
+
+
+.main {
+  background-color: rgb(85, 85, 232);
+  background-image: linear-gradient(158deg, rgb(26 56 186), rgb(193, 184, 240), rgb(13 13 221 / 45%) , grey);
+}
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  height: 100vh;
+ 
+  /* margin-top: 50px; */
+}
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 10vw);
+  grid-template-rows: repeat(3, 10vw);
+  font-family: serif;
+  margin-top: 5vw;
+}
+.line {
+  position: absolute;
+  width: 0vw;
+  height: 3px;
+  background-color: white;
+  transition: width 1s ease-in-out;
+}
+.box {
+  font-size: 8vw;
+  border: 2px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameinfo {
+  margin-top: 5vw;
+}
+.gameinfo h1 {
+  font-family: cursive;
+  padding: 1vw 0;
+}
+.box:hover {
+  background-color: rgb(150, 169, 247);
+}
+.imgbox img {
+  width: 0px;
+  transition: 1s ease-in-out;
+}
+
+/* here i am making grid like steps or khata  */
+.border-left {
+  border-left: 0;
+}
+.border-right {
+  border-right: 0;
+}
+.border-top {
+  border-top: 0;
+}
+.border-bottom {
+  border-bottom: 0;
+}
+.info {
+  font-size: 25px;
+  font-family: cursive;
+}
+#Reset {
+  margin: 0 23px;
+  padding: 6px 20px 8px 20px;
+  background: #8673ff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: cursive;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+@media screen and (max-width: 700px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+  .container {
+    grid-template-columns: repeat(3, 15vw);
+    grid-template-rows: repeat(3, 15vw);
+  }
+  .gameinfo h1 {
+    text-align: center;
+    font-size: 1.4rem;
+  }
+  .turnof {
+    text-align: center;
+  }
+  
+}
+@media screen and (max-width: 420px) {
+  .container {
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 30vw);
+  }
+  .turnof {
+    text-align: center;
+  }
+  .imgbox {
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 200px) {
+  .container {
+    grid-template-columns: repeat(3, 30vw);
+    grid-template-rows: repeat(3, 40vw);
+  }
+  .turnof {
+    text-align: center;
+  }
+  .imgbox {
+    display: flex;
+    justify-content: center;
+  }
+}
